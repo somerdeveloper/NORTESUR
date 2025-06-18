@@ -1,0 +1,382 @@
+
+/*      PALETA BASE    */
+
+:root {
+  --fondo: #E0DEDD;
+  --texto: #0E1BDC;
+  --primario: #DCAD07;
+  --suave: #E1CA73;
+  --acento: #767CDB;
+  --contraste: #0E1BDC;
+}
+
+/*     CONFIG GLOBAL   */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  padding-top: 100px; 
+}
+
+.inicio {
+  padding: 10px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.resumen {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resumen h1 {
+  font-size: 32px;
+  color: var(--texto);
+  margin-bottom: 10px;
+}
+
+.resumen p {
+  font-size: 18px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bloques-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bloque {
+  flex: 1 1 220px;
+  text-align: center;
+  background-color: var(--fondo);
+  border: 2px solid var(--contraste);
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--texto);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bloque:hover {
+  transform: translateY(-5px);
+  background-color: var(--suave);
+}
+
+.bloque i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--texto);
+}
+
+.bloque h2 {
+  margin-bottom: 5px;
+  color: var(--texto);
+}
+
+.bloque p {
+  font-size: 14px;
+  color: #444;
+}
+
+
+
+/*     NAVBAR SUPERIOR */
+
+.navbar {
+  background-color: var(--fondo);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  padding: 10px 20px;
+  border-bottom: 3px solid var(--contraste);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--texto);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  white-space: nowrap; 
+  word-break: keep-all;
+}
+
+.nav-links li a:hover {
+  background-color: var(--suave);
+}
+
+.nav-bar-secundaria {
+  display: none;
+  width: 100%;  
+  background-color: var(--fondo);
+  border-top: 2px solid var(--contraste);
+  padding: 10px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.nav-bar-secundaria.activo {
+  display: flex;
+}
+
+.nav-bar-secundaria a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--texto);
+  font-size: 13px;
+  min-width: 70px;
+  transition: color 0.2s ease;
+}
+
+.nav-bar-secundaria a:hover {
+  color: var(--primario);
+}
+
+.nav-bar-secundaria a i {
+  font-size: 18px;
+}
+
+.toggle-menu {
+  background-color: var(--primario);
+  color: #000;
+  font-size: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-menu:hover {
+  background-color: var(--suave);
+}
+
+
+/*        FOOTER       */
+
+.footer {
+  background-color: var(--fondo);
+  border-top: 3px solid var(--contraste);
+  padding: 20px 30px;
+  text-align: center;
+  color: var(--texto);
+  margin-top: 40px;
+  width: 100vw;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer .social-icons a {
+  color: var(--texto);
+  margin: 0 8px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: var(--primario);
+}
+
+
+/*     RESPONSIVE      */
+
+@media (max-width: 768px) {
+  /* Contenedor principal de navegación en móviles */
+  .navbar {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Logo centrado arriba */
+  .logo {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Lista de enlaces: por defecto oculta */
+  .nav-links {
+    display: none;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  /* Cuando está activo (al presionar el botón) */
+  .nav-links.activo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Cada ítem del menú */
+  .nav-links li {
+    display: flex;
+    flex-direction: column;      
+    align-items: center;
+    min-width: 80px;
+  }
+
+  /* Enlace individual */
+  .nav-links li a {
+    font-size: 13px;
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: column;      
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Botón Menú */
+  .toggle-menu {
+    display: flex;
+    align-self: flex-start;     
+    margin-bottom: 5px;
+  }
+
+  /* Pie de página ajustado */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-bar-secundaria.activo {
+    display: flex;
+    justify-content: center;     
+    align-items: center;         
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100vw;
+    border-top: 2px solid var(--contraste); 
+    padding: 10px 0;
+  }
+
+
+}
+
+/* Oculta el botón de menú en pantallas grandes */
+@media (min-width: 769px) {
+  .toggle-menu {
+    display: none;
+    align-self: flex-start;
+    margin-bottom: 5px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px; 
+  }
+
+  .nav-top {
+    width: auto;
+  }
+
+  .logo img {
+    height: 45px; 
+  }
+
+  .logo span {
+    font-size: 18px; 
+  }
+
+  .nav-bar-secundaria {
+    display: flex !important;
+    justify-content: center;
+    gap: 25px;
+    padding: 8px 0;
+    border-top: none; 
+  }
+
+  .nav-bar-secundaria a {
+    font-size: 14px;
+    min-width: auto;
+    padding: 4px;
+  }
+
+  .nav-bar-secundaria a i {
+    font-size: 16px;
+  }
+  
+}
