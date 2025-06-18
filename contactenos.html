@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios | NORTESUR</title>
+  <title>Contactenos | NORTESUR</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
@@ -28,6 +28,33 @@
     <a href="contactenos.html"><i class="fas fa-user"></i><span>Contactenos</span></a>
   </div>
 </nav>
+
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <form action="#" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto">
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+    </form>
+  </section>
 
     <footer class="footer">
     <div class="footer-content">
